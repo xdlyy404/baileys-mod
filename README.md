@@ -2,7 +2,7 @@
 
 <div align='center'>
 
-![WhatsApp API](https://raw.githubusercontent.com/Bell575/Upload/main/uploads/1742387351904.png)
+![WhatsApp API](https://api.fadzzzproject.my.id/src/baileys-mod.jpg)
 
 </div>
 
@@ -47,7 +47,7 @@ const { default: makeWASocket } = require("@xdlyy404/baileys-mod")
 #### Official
 - [Docs](https://baileys.whiskeysockets.io/)
 
-#### Baileys Pro
+#### Baileys Mod
 - [WhatsApp](https://whatsapp.com/channel/0029Vb89ifxH5JM0fh2VvM2U)
 
 # Index
@@ -531,12 +531,12 @@ The store also provides some simple functions such as `loadMessages` that utiliz
 // send a buttons message!
 sock.sendMessage(jid, {
      text: "Hello World !",
-     footer: "Baileys - 2025",
+     footer: "© Baileys Mod",
      buttons: [
          {
-             buttonId: `🚀`, 
+             buttonId: 'ID', 
              buttonText: {
-                 displayText: '🗿'
+                 displayText: 'DISPLAY BUTTON'
              },
              type: 1 
          }
@@ -550,19 +550,19 @@ sock.sendMessage(jid, {
 ```javascript
 sock.sendMessage(jid, {
   text: "Hello Wolrd !;", 
-  footer: "© Baileys Pro",
+  footer: "© Baileys Mod",
   buttons: [
   {
-    buttonId: '.tes',
+    buttonId: 'ID',
     buttonText: {
-      displayText: 'TESTING BOT'
+      displayText: 'DISPLAY BUTTON'
     },
     type: 1,
   },
   {
-    buttonId: ' ',
+    buttonId: 'ID',
     buttonText: {
-      displayText: 'PRIVATE SCRIPT'
+      displayText: 'DISPLAY BUTTON'
     },
     type: 1,
   },
@@ -578,20 +578,20 @@ sock.sendMessage(jid, {
         title: 'message',
         sections: [
           {
-            title: 'Baileys - 2025',
-            highlight_label: '😜',
+            title: '© Baileys Mod',
+            highlight_label: 'Recomended',
             rows: [
               {
                 header: 'HEADER',
                 title: 'TITLE',
                 description: 'DESCRIPTION',
-                id: 'YOUR ID',
+                id: 'ID',
               },
               {
                 header: 'HEADER',
                 title: 'TITLE',
                 description: 'DESCRIPTION',
-                id: 'YOUR ID',
+                id: 'ID',
               },
             ],
           },
@@ -616,7 +616,7 @@ let msg = generateWAMessageFromContent(m.chat, {
        },
        interactiveMessage: proto.Message.InteractiveMessage.create({
          body: proto.Message.InteractiveMessage.Body.create({
-           text: "Baileys Pro"
+           text: "Baileys Mod"
          }),
          footer: proto.Message.InteractiveMessage.Footer.create({
            text: "Bot"
@@ -780,18 +780,18 @@ await sock.sendMessage(jid, listMessage)
 #### Carousel Message
 ```javascript
 sock.sendMessage(jid, {
-    text: 'hah',
-    footer: 'ya',
+    text: 'TEXT',
+    footer: 'FOOTER',
     cards: [
         {
-            title: 'oke',
+            title: 'TITLE',
             image: { url: 'https://example.com/image.jpeg' },
-            caption: 'tes'
+            caption: 'CAPTION'
         },
         {
-            title: 'oke',
+            title: 'TITLE',
             image: { url: 'https://example.com/image.jpeg' },
-            caption: 'tes'
+            caption: 'CAPTION'
         }
     ],
     viewOnce: true
