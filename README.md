@@ -30,17 +30,17 @@ Here is an example you can use: [example.ts](Example/example.ts) or here is a tu
 
 Use the stable version:
 ```bash
-npm install @xdlyy404/baileys-pro
+npm install @xdlyy404/baileys-mod
 ```
 
 Use the edge version (no guarantee of stability, but latest fixes + features)
 ```bash
-yarn add @xdlyy404/baileys-pro@latest
+yarn add @xdlyy404/baileys-mod@latest
 ```
 
 Then import your code using:
 ```javascript
-const { default: makeWASocket } = require("@xdlyy404/baileys-pro")
+const { default: makeWASocket } = require("@xdlyy404/baileys-mod")
 ```
 # Links
 
@@ -198,7 +198,7 @@ WhatsApp provides a multi-device API that allows Baileys to be authenticated as 
 > You can customize browser name if you connect with **QR-CODE**, with `Browser` constant, we have some browsers config, **see [here](https://baileys.whiskeysockets.io/types/BrowsersMap.html)**
 
 ```javascript
-const { default: makeWASocket } = require("@xdlyy404/baileys-pro")
+const { default: makeWASocket } = require("@xdlyy404/baileys-mod")
 
 
 const sock = makeWASocket({
@@ -219,7 +219,7 @@ If the connection is successful, you will see a QR code printed on your terminal
 The phone number can't have `+` or `()` or `-`, only numbers, you must provide country code
 
 ```javascript
-const { default: makeWASocket } = require("@xdlyy404/baileys-pro")
+const { default: makeWASocket } = require("@xdlyy404/baileys-mod")
 
 const sock = makeWASocket({
     // can provide additional config here
@@ -320,8 +320,8 @@ You obviously don't want to keep scanning the QR code every time you want to con
 
 So, you can load the credentials to log back in:
 ```javascript
-const makeWASocket = require("@xdlyy404/baileys-pro").default;
-const { useMultiFileAuthState } = require("@xdlyy404/baileys-pro");
+const makeWASocket = require("@xdlyy404/baileys-mod").default;
+const { useMultiFileAuthState } = require("@xdlyy404/baileys-mod");
 
 // enable authDebug to display session logs
 const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys', { authDebug: true })
@@ -380,8 +380,8 @@ sock.ev.on('messages.upsert', ({ messages }) => {
 > This example includes basic auth storage too
 
 ```javascript
-const makeWASocket = require("@xdlyy404/baileys-pro").default;
-const { DisconnectReason, useMultiFileAuthState } = require("@xdlyy404/baileys-pro");
+const makeWASocket = require("@xdlyy404/baileys-mod").default;
+const { DisconnectReason, useMultiFileAuthState } = require("@xdlyy404/baileys-mod");
 const Boom = require('@hapi/boom');
 
 async function connectToWhatsApp () {
@@ -463,8 +463,8 @@ sock.ev.on('messages.update', event => {
 It can be used as follows:
 
 ```javascript
-const makeWASocket = require("@xdlyy404/baileys-pro").default;
-const { makeInMemoryStore } = require("@xdlyy404/baileys-pro");
+const makeWASocket = require("@xdlyy404/baileys-mod").default;
+const { makeInMemoryStore } = require("@xdlyy404/baileys-mod");
 // the store maintains the data of the WA connection in memory
 // can be written out to a file & read from it
 const store = makeInMemoryStore({ })
@@ -1225,7 +1225,7 @@ await sock.sendMessage(jid, {
 If you want to save the media you received
 ```javascript
 const { createWriteStream } = require('fs');
-const { downloadMediaMessage, getContentType } = require("@xdlyy404/baileys-pro");
+const { downloadMediaMessage, getContentType } = require("@xdlyy404/baileys-mod");
 
 sock.ev.on('messages.upsert', async ({ [m] }) => {
     if (!m.message) return // if there is no text or media message
